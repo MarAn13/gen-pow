@@ -17,6 +17,7 @@ private:
 	QWidget* parent;
 	sf::RenderWindow window;
 	sf::Font font;
+	std::string path_to_font = "media/font/";
 	std::string font_file = "Roboto-Regular.ttf";
 	sf::Text text;
 	std::chrono::time_point<std::chrono::system_clock> global_start;
