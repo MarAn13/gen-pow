@@ -47,10 +47,10 @@ QLabel {
   <widget class="QLabel" name="label_anim">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>140</x>
      <y>100</y>
-     <width>150</width>
-     <height>150</height>
+     <width>128</width>
+     <height>128</height>
     </rect>
    </property>
    <property name="text">
