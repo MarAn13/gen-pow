@@ -207,7 +207,7 @@ QPushButton::hover {
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="Generate_pow.qrc"/>
+  <include location="Gen_pow.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -19,6 +19,20 @@ Gen_pow_SFML::Gen_pow_SFML(int num, int power, QWidget* parent)
 		text.setFont(font);
 		int character_size = 30;
 		text.setCharacterSize(character_size);
+		file_buffers = new sf::SoundBuffer[num_of_sound_files];
+		sound = new sf::Sound[num_of_sound_files];
+		for (int i = 0; i < num_of_sound_files; ++i) {
+			sf::SoundBuffer buffer;
+			std::string file = path_to_sound + file_location[i];
+			if (!buffer.loadFromFile(file)) {
+				std::string file_exception = "Sound file " + file + " was not found";
+				throw std::exception(file_exception.c_str());
+			}
+			file_buffers[i] = buffer;
+			sf::Sound sound_temp;
+			sound_temp.setBuffer(file_buffers[i]);
+			sound[i] = sound_temp;
+		}
 		global_start = std::chrono::system_clock::now();
 		draw_driver();
 	}
@@ -34,6 +48,7 @@ Gen_pow_SFML::Gen_pow_SFML(int num, int power, QWidget* parent)
 
 Gen_pow_SFML::~Gen_pow_SFML()
 {
+	delete[] file_buffers, sound;
 }
 
 void Gen_pow_SFML::draw_driver()
@@ -63,6 +78,7 @@ void Gen_pow_SFML::draw_driver()
 		}
 		++temp_power;
 	}
+	sound[1].play();
 	while (window.isOpen()) {
 		if (window.waitEvent(event)) {
 			if (event.type == sf::Event::Closed) {
@@ -98,5 +114,6 @@ void Gen_pow_SFML::draw(int x_center, int y_center, long long int& pixel_scale, 
 	}
 	window.draw(temp);
 	window.display();
+	sound[0].play();
 	std::this_thread::sleep_for(std::chrono::milliseconds(delay));
 }

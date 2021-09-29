@@ -2,6 +2,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMessageBox>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <Windows.h>
 #include <iostream>
 #include <cmath>
@@ -16,6 +17,11 @@ public:
 private:
 	QWidget* parent;
 	sf::RenderWindow window;
+	const std::string path_to_sound = "media/sound/";
+	const int num_of_sound_files = 2;
+	const std::string file_location[2] = { "step_sound.wav", "success.wav" };
+	sf::SoundBuffer* file_buffers;
+	sf::Sound* sound;
 	sf::Font font;
 	std::string path_to_font = "media/font/";
 	std::string font_file = "Roboto-Regular.ttf";
