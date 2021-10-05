@@ -1,4 +1,17 @@
 <RCC>
-    <qresource prefix="Gen_pow">
+    <qresource prefix="/gen_pow">
+      <file>media/doubles_anim/doubles_state_1.png</file>
+      <file>media/doubles_anim/doubles_state_2.png</file>
+      <file>media/doubles_anim/doubles_state_3.png</file>
+      <file>media/doubles_anim/doubles_state_4.png</file>
+      <file>media/doubles_anim/doubles_state_5.png</file>
+      <file>media/doubles_anim/doubles_state_6.png</file>
+      <file>media/doubles_anim/doubles_state_7.png</file>
+      <file>media/font/Roboto-Regular.ttf</file>
+      <file>media/sound/step_sound.wav</file>
+      <file>media/sound/success.wav</file>
+      <file>media/resources/check_mark.svg</file>
+      <file>media/resources/up_arrow.svg</file>
+      <file>media/resources/down_arrow.svg</file>
     </qresource>
 </RCC>

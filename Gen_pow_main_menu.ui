@@ -57,7 +57,7 @@ QSpinBox::up-button {
 }
 
 QSpinBox::up-arrow {
-	image: url(C:/Users/marem/Downloads/vectorpaint (9).svg);
+	image: url(&quot;:gen_pow/media/resources/up_arrow.svg&quot;);
 }
 
 QSpinBox::down-button {
@@ -69,7 +69,20 @@ QSpinBox::down-button {
 }
 
 QSpinBox::down-arrow {
-	image: url(C:/Users/marem/Downloads/vectorpaint (10).svg);
+	image: url(&quot;:gen_pow/media/resources/down_arrow.svg&quot;);
+}
+
+QCheckBox {
+	color: #ffffff;
+}
+
+QCheckBox::indicator {
+	border: 1px solid #ffffff;
+	background-color: #36454f;
+}
+
+QCheckBox::indicator:checked {
+	image: url(&quot;:gen_pow/media/resources/check_mark.svg&quot;);
 }
 
 QSlider::groove:vertical {
@@ -108,7 +121,7 @@ QPushButton::hover {
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>150</y>
+      <y>100</y>
       <width>42</width>
       <height>22</height>
      </rect>
@@ -140,7 +153,7 @@ QPushButton::hover {
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>150</y>
+      <y>100</y>
       <width>64</width>
       <height>23</height>
      </rect>
@@ -185,7 +198,7 @@ QPushButton::hover {
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>200</y>
+      <y>150</y>
       <width>141</width>
       <height>20</height>
      </rect>
@@ -201,6 +214,19 @@ QPushButton::hover {
     </property>
     <property name="wordWrap">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>190</y>
+      <width>70</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sound</string>
     </property>
    </widget>
   </widget>

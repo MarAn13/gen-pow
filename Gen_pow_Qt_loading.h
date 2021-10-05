@@ -15,8 +15,9 @@ public:
 private:
 	Ui::Gen_pow_loading_screen* ui;
 	const int anim_num = 7;
-	std::string folder_path = "media/doubles_anim/";
-	std::string anim_paths[7] = { "doubles_state_1.png", "doubles_state_2.png", "doubles_state_3.png", "doubles_state_4.png", "doubles_state_5.png",
+	const std::string qrc_prefix = ":/gen_pow/";
+	const std::string folder_path = "media/doubles_anim/";
+	const std::string anim_paths[7] = { "doubles_state_1.png", "doubles_state_2.png", "doubles_state_3.png", "doubles_state_4.png", "doubles_state_5.png",
 		"doubles_state_6.png", "doubles_state_7.png" };
 	int current_anim = 0;
 	void update_pixelmap();

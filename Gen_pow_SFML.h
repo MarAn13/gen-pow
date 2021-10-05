@@ -12,7 +12,7 @@
 class Gen_pow_SFML
 {
 public:
-	Gen_pow_SFML(int num, int power, QWidget* parent = nullptr);
+	Gen_pow_SFML(int num, int power, bool option_sound, QWidget* parent = nullptr);
 	~Gen_pow_SFML();
 private:
 	QWidget* parent;
@@ -23,12 +23,13 @@ private:
 	sf::SoundBuffer* file_buffers;
 	sf::Sound* sound;
 	sf::Font font;
-	std::string path_to_font = "media/font/";
-	std::string font_file = "Roboto-Regular.ttf";
+	const std::string path_to_font = "media/font/";
+	const std::string font_file = "Roboto-Regular.ttf";
 	sf::Text text;
 	std::chrono::time_point<std::chrono::system_clock> global_start;
 	std::chrono::time_point<std::chrono::system_clock> global_end = std::chrono::time_point<std::chrono::system_clock>();
 	const int delay = 1000;
+	const bool option_sound;
 	struct Rect {
 		long long int height;
 		long long int width;

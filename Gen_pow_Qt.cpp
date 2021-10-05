@@ -34,10 +34,11 @@ void Gen_pow_Qt::on_verticalSlider_valueChanged()
 
 void Gen_pow_Qt::on_pushButton_clicked()
 {
+	option_sound = ui->checkBox->isChecked();
 	Gen_pow_Qt_loading loading;
 	this->hide();
 	loading.show();
-	Gen_pow_SFML app(num, power, this);
+	Gen_pow_SFML app(num, power, option_sound, this);
 	loading.hide();
 	this->show();
 }

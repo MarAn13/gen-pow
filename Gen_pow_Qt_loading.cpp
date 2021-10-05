@@ -19,7 +19,7 @@ void Gen_pow_Qt_loading::update_pixelmap()
 {
 	QPixmap pix;
 
-	if (pix.load(QString::fromStdString(folder_path + anim_paths[current_anim]))) {
+	if (pix.load(QString::fromStdString(qrc_prefix + folder_path + anim_paths[current_anim]))) {
 		pix = pix.scaled(ui->label_anim->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 		ui->label_anim->setPixmap(pix);
 		if (current_anim == anim_num - 1) {

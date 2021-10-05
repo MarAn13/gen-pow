@@ -19,6 +19,7 @@ private:
 	long long int limit = LLONG_MAX;
 	int num;
 	int power;
+	bool option_sound;
 private slots:
 	void on_spinBox_valueChanged();
 	void on_verticalSlider_valueChanged();

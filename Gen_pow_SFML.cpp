@@ -1,7 +1,7 @@
 #include "Gen_pow_SFML.h"
 
-Gen_pow_SFML::Gen_pow_SFML(int num, int power, QWidget* parent)
-	:num(num), power(power), parent(parent)
+Gen_pow_SFML::Gen_pow_SFML(int num, int power, bool option_sound, QWidget* parent)
+	:num(num), power(power), option_sound(option_sound), parent(parent)
 {
 	try {
 		HWND hd = GetDesktopWindow();
@@ -114,6 +114,8 @@ void Gen_pow_SFML::draw(int x_center, int y_center, long long int& pixel_scale, 
 	}
 	window.draw(temp);
 	window.display();
-	sound[0].play();
+	if (option_sound) {
+		sound[0].play();
+	}
 	std::this_thread::sleep_for(std::chrono::milliseconds(delay));
 }
