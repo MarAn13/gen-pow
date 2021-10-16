@@ -16,7 +16,7 @@ public:
 	~Gen_pow_Qt();
 private:
 	Ui::Generate_powClass* ui;
-	long long int limit = LLONG_MAX;
+	const long long int limit = LLONG_MAX;
 	int num;
 	int power;
 	bool option_sound;
