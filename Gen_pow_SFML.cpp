@@ -78,7 +78,9 @@ void Gen_pow_SFML::draw_driver()
 		}
 		++temp_power;
 	}
-	sound[1].play();
+	if (option_sound) {
+		sound[1].play();
+	}
 	while (window.isOpen()) {
 		if (window.waitEvent(event)) {
 			if (event.type == sf::Event::Closed) {
